@@ -1,0 +1,381 @@
+@CHARSET "US-ASCII";
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: Ariel, Verdana, sans-serif;
+	font-size: medium;
+	height: inherit;
+	background-color: #cad9f0;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mainContainer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+.contentContainer {
+	width: 440px;
+	height: 230px;
+	background: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	position: relative;
+	margin: auto;
+	top: 45%;
+	margin-top: -90px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.80);
+}
+
+header {
+	background-color: #3D6AA2;
+	padding: 15px, 15px;
+	color: #FAFAFA;
+	width: 102%;
+	margin: 0%;
+	height: 8%;
+}
+
+header h3 {
+	position: absolute;
+	left: 45%;
+	padding: 2px;
+}
+
+#documentInfo {
+	position: absolute;
+	left: 81%;
+	height: 8%;
+	width: 70%;
+	display: none;
+}
+
+#editSessionId {
+	width: 325px;
+	position: absolute;
+	top: 9%;
+	left: 75%;
+	z-index: 10;
+	display: none;
+	border-radius: 4px 4px 4px 4px;
+	border: solid 1px;
+	background: white;
+}
+
+#sessionIdInput {
+	padding-left: 6px;
+	padding-right: 6px;
+	left: 100px;
+}
+
+#updateSessionId {
+	left: 95px;
+}
+
+#sessionInfoDiv {
+	position: relative;
+	top: -12px;
+	z-index: 50;
+}
+
+#sessionInfoDiv .col-lg-5,#sessionInfoDiv .col-lg-2,#pdfNameDiv .col-lg-5,#pdfNameDiv .col-lg-2
+	{
+	padding-right: 1px;
+	padding-left: 1px;
+}
+
+#sessionInfoDiv .col-lg-2 {
+	margin-right: 10px;
+}
+
+#sessionInfoDiv .col-lg-5 {
+	right: 86px;
+	font-size: 15px;
+	padding-top: 5px;
+}
+
+#clickToEdit {
+	color: white;
+}
+
+#pdfNameDiv .col-lg-5 {
+	margin: 0px;
+	padding-top: 10px;
+	right: 85px;
+}
+
+footer {
+	background-color: #3D6AA2;
+	margin: 0px;
+	height: 20px;
+	padding-right: 25px;
+	text-align: center;
+	position: absolute;
+	top: 97.5%;
+	left: 0%;
+	width: 100%;
+	border: solid 1px;
+}
+
+.browseDoc {
+	position: relative;
+	left: -5%;
+	top: 15%;
+}
+
+#fileUploadInputReal {
+	position: absolute;
+	top: 10%;
+	z-index: 1;
+	opacity: 0;
+	width: 300px;
+	cursor: pointer;
+}
+
+#fileUploadInputFake {
+	position: absolute;
+	top: 10%;
+	width: 300px;
+}
+
+.retriewSession {
+	left: 8%;
+	position: absolute;
+	top: 45%;
+}
+
+.sessionInfoInput {
+	left: 8%;
+	position: absolute;
+	top: 60%;
+}
+
+#toggleRow {
+	display: none;
+}
+
+.linkStyle {
+	text-decoration: underline;
+}
+
+#leftDiv {
+	overflow: auto;
+	position: absolute;
+	background-color: #ffffff;
+	top: 9.5%;
+	width: 10%;
+	height: 86.5%;
+	left: 0.75%;
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 10px 10px 10px 10px;
+	padding: 5px 10px 10px 5px;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+#centerDiv {
+	background-color: rgb(255, 255, 255);
+	cursor: crosshair;
+	height: 86.5%;
+	left: 11.5%;
+	overflow: scroll;
+	padding: 0 10px 10px;
+	position: absolute;
+	top: 9.5%;
+	width: 69%;
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+#rightDiv {
+	background-color: rgb(255, 255, 255);
+	height: 86.5%;
+	left: 81.25%;
+	overflow: auto;
+	padding: 0 10px 10px;
+	position: absolute;
+	top: 9.5%;
+	width: 17.75%;
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.canvasStyle {
+	padding: 0px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	overflow: auto;
+}
+
+#imgCanvas {
+	z-index: 0;
+}
+
+#rectangleCanvas {
+	z-index: 1;
+}
+
+#tempCanvas {
+	z-index: 2;
+}
+
+.thumbnail {
+	margin: 0 0 5px;
+}
+
+.thumbnail .caption {
+	margin: 0px;
+	padding: 0px;
+}
+
+.thumbnail .caption>p {
+	text-align: center;
+	background-color: #cad9f0;
+	border: 1px thin;
+	border-radius: 5px;
+	margin: 0px;
+}
+
+#uploadOrStatusClass {
+	position: absolute;
+	top: 10%;
+	left: 78%;
+}
+
+#uploadButton {
+	z-index: 1000;
+}
+
+#uploadProgressImage {
+	display: none;
+}
+
+#labelMarkedTextModal {
+	width: 20%;
+	overflow: hidden;
+}
+
+.modal {
+	top: 20%;
+	left: 40%;
+}
+
+.modal-header {
+	padding: 1px;
+	text-align: center;
+	background-color: rgb(202, 217, 240);
+}
+
+.modal-body {
+	text-align: left;
+}
+
+.modal-footer {
+	margin-top: 1px;
+	padding: 5px;
+	text-align: center;
+	background-color: rgb(202, 217, 240);
+}
+
+button.close {
+	padding: 5px;
+}
+
+.panel {
+	margin-bottom: 10px;
+}
+
+.panel-heading,.panel-body {
+	padding: 0px;
+}
+
+.panel-body {
+	padding-left: 5px;
+}
+
+.labelContent {
+	padding-left: 5px;
+	padding-top: 5px;
+	margin: 0px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.markedTextContent {
+	width: 200px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#pdfTypeValidationDiv {
+	left: 8%;
+	position: absolute;
+	top: 32%;
+	display: none;
+}
+
+#sessionIdValidation {
+	display: none;
+	left: 8%;
+	top: 76%;
+	position: absolute;
+}
+
+#sessionIdUpdateValidation {
+	display: none;
+}
+
+#sessionIdToEdit {
+	padding-left: 25px;
+	padding-right: 1px;
+	position: relative;
+}
+
+#sessionIdToEdit input{
+	width:115%;
+}
+
+#updateSessionButton {
+	position:relative;
+	 left: 20px;
+}
+
+#editSessionInfoSign {
+	cursor: pointer;
+}
+
+#alertError {
+	position: relative;
+	width: 20%;
+	height: 13%;
+	top: 20%;
+	left: 40%;
+}
+
+#alertDiv {
+	z-index: 500;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+#updateSessionButton button {
+	border: none;
+}

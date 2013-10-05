@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PDF Mark</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles/pdf-file-info.css">
+</head>
+<body style="background-color: #cad9f0;">
+	<header>
+		<h3>PDF Marker</h3>
+		<div id="documentInfo">
+			<div class="row" id="pdfNameDiv">
+				<div class="col-lg-5">
+					<p id="pdfFileName" style="font-size: small"></p>
+				</div>
+			</div>
+			<div class="row" id="sessionInfoDiv">
+				<div class="col-lg-5">
+					<a href="javascript:editSessionId();" id="clickToEdit"
+						class="linkStyle" title="Click to edit session id"></a> 
+				</div>
+			</div>
+		</div>
+		<div id="editSessionId" class="dropdown-menu">
+			<div class="row">
+				<div class="col-lg-9" id="sessionIdToEdit">
+					<input type="text" class="form-control" autofocus="autofocus"
+						size="15" placeholder="Rename Session" />
+				</div>
+				<div class="col-lg-2" id="updateSessionButton" title="Save">
+					<button class="btn btn-default">
+						<span class="glyphicon glyphicon-floppy-save"></span>
+					</button>
+				</div>
+			</div>
+			<div class="row" id="sessionIdUpdateValidation">
+				<div class="col-lg-12">
+					<p style="font-size: small; color: red"></p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="alertDiv">
+		<div id="alertError" class="alert alert-danger alert-dismissable">
+			<button type="button" class="close" aria-hidden="true">&times;</button>
+			<p></p>
+		</div>
+	</div>
+	<div id="mainBox" class="mainContainer"></div>
+	<footer> </footer>
+	<!-- Scripts -->
+	<script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="scripts/jcanvas.min.js"></script>
+	<script type="text/javascript" src="scripts/pdfMarkerMain.js"></script>
+	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+</body>
+</html>

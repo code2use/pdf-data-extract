@@ -1,0 +1,23 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>PDF Data Extract Servlet</display-name>
+	<context-param>
+		<param-name>work.folder</param-name>
+		<param-value>/dataextract-temp-processing</param-value>
+		<description>Path to work folder</description>
+	</context-param>
+	<servlet>
+		<servlet-name>pde</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pde</servlet-name>
+		<url-pattern>/pde/*</url-pattern>
+	</servlet-mapping>
+</web-app>

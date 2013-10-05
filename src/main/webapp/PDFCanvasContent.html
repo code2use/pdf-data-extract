@@ -1,0 +1,55 @@
+<div id="container">
+	<div class="row">
+		<div id="leftDiv"></div>
+		<div id="centerDiv">
+			<canvas class="canvasStyle" id="imgCanvas" width="1200" height="1439">
+					</canvas>
+			<canvas class="canvasStyle" id="rectangleCanvas" width="1200"
+				height="1439">
+					</canvas>
+			<canvas class="canvasStyle" id="tempCanvas" width="1200"
+				height="1439">
+					</canvas>
+		</div>
+		<div id="rightDiv">
+			<div id="markedTextInfoContainer">
+				<h4 id="headingOfMarkedArea">Marked Text Areas</h4>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal modal-content" id="labelMarkedTextModal">
+	<div class="modal-header" id="modalHeader">
+		<button type="button" class="close" data-dismiss="modal">x</button>
+		<h4 id="labelMarkedText">Label Marked Text</h4>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+			<strong>Position (x,y,w,h)</strong>
+		</div>
+		<div class="row">
+			<label id="coordinate"> </label>
+		</div>
+		<div class="row">
+			<strong>Marked Text</strong>
+		</div>
+		<div class="row">
+			<textarea id="markedText" rows="5" cols="25" class="form-control"
+				readonly="readonly" style="background: #f2f6fb"> </textarea>
+		</div>
+		<div class="row">
+			<label for="labelText" style="margin-top: 10px"><strong>Label</strong></label>
+		</div>
+		<div class="row">
+			<div id="labelTextDiv"">
+				<input id="labelText" class="form-control" size="25" maxlength="25"
+					autofocus="autofocus" />
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<button class="btn btn-primary" id="saveLabelButton">Save</button>
+	</div>
+</div>
+<script type="text/javascript" src="scripts/pdfMarkerCanvas.js"></script>
