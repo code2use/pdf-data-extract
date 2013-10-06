@@ -6,7 +6,7 @@
 	<display-name>PDF Data Extract Servlet</display-name>
 	<context-param>
 		<param-name>work.folder</param-name>
-		<param-value>/dataextract-temp-processing</param-value>
+		<param-value>/opt/temp/data-extract-temp</param-value>
 		<description>Path to work folder</description>
 	</context-param>
 	<servlet>
