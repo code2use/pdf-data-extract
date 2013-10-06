@@ -531,3 +531,4 @@ function proceedToEditSessionId(event) {
 		updateSessionId();
 	}
 }
+

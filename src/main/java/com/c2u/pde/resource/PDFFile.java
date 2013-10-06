@@ -271,7 +271,7 @@ public class PDFFile {
 		BufferedWriter writer = null;
 		String appFolder = (String) session
 				.getAttribute(PDEConstants.SESSION_WORK_FOLDER_VAR)
-				+ "/config.txt";
+				+ "/" + PDEConstants.DATA_EXTRACT_CONFIG_FILE;
 		try {
 			writer = new BufferedWriter(new FileWriter(appFolder));
 			writer.write(configFileContent);
@@ -296,13 +296,13 @@ public class PDFFile {
 		return (String) session.getAttribute(PDEConstants.SESSION_UUID);
 	}
 
-	@RequestMapping(value = "/retriewConfigData", method = RequestMethod.GET, produces = MediaType.TEXT_PLAIN_VALUE)
+	@RequestMapping(value = "/retriewConfigData", method = RequestMethod.GET, consumes = MediaType.ALL_VALUE, produces = MediaType.TEXT_PLAIN_VALUE)
 	public @ResponseBody
 	String retriewConfigFileData(HttpSession session) throws IOException {
 		BufferedReader reader = null;
 		String appFolder = (String) session
 				.getAttribute(PDEConstants.SESSION_WORK_FOLDER_VAR)
-				+ "/config.txt";
+				+ "/" + PDEConstants.DATA_EXTRACT_CONFIG_FILE;
 
 		if (new File(appFolder).exists()) {
 			try {
